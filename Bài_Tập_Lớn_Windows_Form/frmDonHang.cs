@@ -88,7 +88,7 @@ namespace Bài_Tập_Lớn_Windows_Form
                 string GiaTien = row.Cells["GiaTien"].Value.ToString().Trim();
                 labelNgayBan.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 string NgayBan = labelNgayBan.Text.Trim();
-                string DiaChi = txtDiaChi.Text;
+                string DiaChi = txtDiaChi.Text.Trim();
                 string MaKhachhang = data;
 
                 string them = "Insert into HoaDon values('" + maSanPham + "', N'" + TenSanPham + "', N'" + XuatXu + "', N'" + LoaiSanPham + "', '" + SoLuong + "', '" + GiaTien + "', '" + NgayBan + "', N'"+DiaChi+"', '"+MaKhachhang+"')";

@@ -69,9 +69,9 @@ namespace Bài_Tập_Lớn_Windows_Form
                 MessageBox.Show("Vui lòng nhập mã bạn muốn sửa và điền đủ thông tin bạn muốn sửa");
                 return;
             }
-            string sua = "UPDATE SanPham SET TenSanPham = '" + txtTenSanPham.Text.Trim() + "', " +
-             "XuatXu = '" + txtXuatXu.Text.Trim() + "', " +
-             "LoaiSanPham = '" + txtLoaiSanPham.Text.Trim() + "', " +
+            string sua = "UPDATE SanPham SET TenSanPham = N'" + txtTenSanPham.Text.Trim() + "', " +
+             "XuatXu = N'" + txtXuatXu.Text.Trim() + "', " +
+             "LoaiSanPham = N'" + txtLoaiSanPham.Text.Trim() + "', " +
              "SoLuong = '"+txtSoLuong.Text.Trim()+"',"+
              "GiaTien = '"+txtGiaTien.Text.Trim()+"' "+
              "Where MaSanPham = '" + txtMaSanPham.Text.Trim() + "'";

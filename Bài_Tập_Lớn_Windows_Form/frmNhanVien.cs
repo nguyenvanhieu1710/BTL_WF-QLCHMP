@@ -70,13 +70,13 @@ namespace Bài_Tập_Lớn_Windows_Form
                 MessageBox.Show("Vui lòng nhập mã bạn muốn sửa và điền đủ thông tin bạn muốn sửa");
                 return;
             }
-            string sua = "UPDATE NhanVien SET TenKhachHang = '" + txtTenNhanVien.Text.Trim() + "', " +
-                    "QueQuan = '" + txtQueQuan.Text.Trim() + "', " +
+            string sua = "UPDATE NhanVien SET TenNhanVien = N'" + txtTenNhanVien.Text.Trim() + "', " +
+                    "QueQuan = N'" + txtQueQuan.Text.Trim() + "', " +
                     "SoDienThoai = '" + txtSoDienThoai.Text.Trim() + "' " +
                     "Where MaNhanVien = '" + txtMaNhanVien.Text.Trim() + "'";
 
             DataTable dtcheck = db.GetDataTable("select * from NhanVien where MaNhanVien='" + txtMaNhanVien.Text.Trim() + "'");
-            if (dtcheck.Rows.Count == 1)
+            if (dtcheck.Rows.Count > 0)
             {
                 if (MessageBox.Show("Bạn chắc chắn muốn sửa chứ?", "Sửa", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {

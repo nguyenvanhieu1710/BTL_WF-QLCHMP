@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -54,6 +55,11 @@ namespace Bài_Tập_Lớn_Windows_Form
         private void button2_Click_2(object sender, EventArgs e)
         {
             Application.Exit();
+            this.Dispose();
+            Process proc = new Process();
+            proc.StartInfo.FileName = Application.StartupPath + "\\Bài_Tập_Lớn_Windows_Form.exe";
+            proc.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            proc.Start();
         }
 
         private void button4_Click(object sender, EventArgs e)
